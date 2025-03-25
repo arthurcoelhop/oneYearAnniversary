@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  background-image: url("./src/foto\ 1.jfif"); /* Aqui é a foto de fundo */
+  background-size: cover;
+  background-position: center;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  max-width: 1200px;
+  height: 80%;
+  position: relative;
+}
+
+.left-side,
+.right-side {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  font-family: "Verdana", sans-serif;
+  color: #fff0f0;
+}
+
+.message {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  opacity: 0;
+  transition: opacity 1s ease-in;
+  text-align: left; /* A mensagem ficará alinhada à esquerda */
+}
+
+.image-container {
+  opacity: 0;
+  transition: opacity 2s ease-in;
+  display: flex;
+  justify-content: center;
+}
+
+#coupleImage {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+  display: block;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    height: auto;
+  }
+  .left-side,
+  .right-side {
+    width: 100%;
+    align-items: center;
+  }
+  header h1 {
+    font-size: 2rem;
+  }
+  .message {
+    font-size: 1rem;
+  }
+}
